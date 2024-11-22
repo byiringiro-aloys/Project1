@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgba(255, 140, 120, 0.274);
+    }
+    figure{
+        width: 500px;
+        height: 300px;
+    }
+    input:focus{
+        outline: orange solid;
+    }
+    input{
+        border: none;
+        border-bottom: solid blue;
+    }
+    .containers{
+        padding-left: 50px;
+        background-color: rgb(136, 175, 162);
+    }
+</style>
+<body>
+    <div class="containers">
+        <h1>General survey for Students in Rwanda Coding Academy</h1>
+        <form action="data-process.php" method="post">
+            <h2>Personal details</h2>
+            <label>First name</label><br>
+            <input type="text" name="firstName" placeholder="Enter your first name" required><br><br>
+            <label>Second name</label><br>
+            <input type="text" name="secondName" placeholder="Enter your second name" required><br><br>
+            <label>Date of Birth:</label><br>
+            <input type="date" name="dob"><br><br>
+            <label>Select you class:</label><br>
+            <select name="select" >
+                <option value="class">--select--</option>
+                <optgroup aria-valuemin="YEAR 1">
+                    <option value="class">YEAR 1 A</option>
+                    <option value="class">YEAR 1 B</option>
+                    <option value="class">YEAR 1 C</option>
+                </optgroup>
+                <optgroup aria-valuemax="YEAR 2">
+                    <option value="class">YEAR 2 A</option>
+                    <option value="class">YEAR 2 B</option>
+                    <option value="class">YEAR 2 C</option>
+                    <option value="class">YEAR 2 D</option>
+                </optgroup>
+                <optgroup aria-valuemin="YEAR 3">
+                    <option value="class">YEAR 3 A</option>
+                    <option value="class">YEAR 3 B</option>
+                    <option value="class">YEAR 3 C</option>
+                    <option value="class">YEAR 3 D</option>
+                </optgroup>              
+            </select><br><br>
+            <label>Select the Province you live in:</label><br>
+            <select name="options" aria-valuemax="2" required>
+                <option value="Southern Province">--select--</option>
+                <option value="Southern Province">Southern Province</option>
+                <option value="Northern Province">Northern Province</option>
+                <option value="Eastern Province">Eastern Province</option>
+                <option value="Western Province">Western Province</option>
+                <option value="Kigali city Province">Kigali city</option>
+            </select> <br><br>
+            <label>District:</label><br>
+            <input type="text" name="district" placeholder="Enter the district you live in" required><br><br>
+            <label>Put your comment here about Rwanda coding Academy</label><br>
+            <textarea name="opinion" rows="3" cols="50" placeholder="Enter your Opinions here" required></textarea><br><br>
+            <h2>Contact information</h2>
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required><br><br>
+            <label for="number">Phone number: &numero;</label>
+            <input type="number" name="phone-number" placeholder="Enter phone number" required><br><br>
+            <input type="checkbox" name="Accept" required><label>Confirm that the above informations are true and relevant.</label><br><br>
+            <input type="submit"><br><br>
+        </form>
+    </div>
+</body>
+</html>
